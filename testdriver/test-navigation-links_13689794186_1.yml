@@ -1,0 +1,13 @@
+version: 4.2.12
+session: 67c909b287ffd6929e3064f8
+steps:
+  - prompt: Click on the "Github" link in the header.
+    commands:
+      - command: hover-text
+        text: Github
+        description: link to Github in the header
+        action: click
+  - prompt: Assert that the GitHub page opens successfully.
+    commands:
+      - command: assert
+        expect: the GitHub page for "wavetermdev/waveterm" is open
