@@ -1,0 +1,45 @@
+version: 4.2.12
+session: 67c909b2f83fdb2e1aab65d5
+steps:
+  - prompt: Scroll to the bottom of the page.
+    commands:
+      - command: scroll
+        direction: down
+        amount: 3000
+  - prompt: Scroll to the bottom of the page.
+    commands:
+      - command: scroll
+        direction: down
+        amount: 3000
+  - prompt: Scroll to the bottom of the page.
+    commands:
+      - command: scroll
+        direction: down
+        amount: 3000
+  - prompt: Scroll to the bottom of the page.
+    commands:
+      - command: scroll
+        direction: down
+        amount: 3000
+  - prompt: Scroll to the bottom of the page.
+    commands:
+      - command: scroll
+        direction: down
+        amount: 3000
+  - prompt: Scroll to the bottom of the page.
+    commands:
+      - command: scroll
+        direction: down
+        amount: 3000
+      - command: hover-text
+        text: Documentation
+        description: footer link for documentation
+        action: click
+  - prompt: Assert that each link navigates to the correct page.
+    commands:
+      - command: assert
+        expect: Welcome to Wave Terminal
+  - prompt: Verify that no errors occur during navigation.
+    commands:
+      - command: assert
+        expect: no error messages are visible
