@@ -1,0 +1,25 @@
+version: 4.2.12
+session: 67c909aef83fdb2e1aab65d2
+steps:
+  - prompt: Click on the "Community" dropdown in the header.
+    commands:
+      - command: hover-text
+        text: Community
+        description: dropdown in the header
+        action: click
+  - prompt: Assert that all options are displayed correctly.
+    commands:
+      - command: assert
+        expect: >-
+          Discord, LinkedIn, X/Twitter, YouTube options are visible in the
+          Community dropdown
+  - prompt: Select an option from the dropdown.
+    commands:
+      - command: hover-text
+        text: Discord
+        description: option in the Community dropdown
+        action: click
+  - prompt: Assert that the selected page opens without errors.
+    commands:
+      - command: assert
+        expect: Discord page is loaded with invitation details visible
