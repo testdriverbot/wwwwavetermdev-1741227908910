@@ -1,0 +1,29 @@
+version: 4.2.12
+session: 67c909b4f83fdb2e1aab65d7
+steps:
+  - prompt: Verify the presence of the main headline text.
+    commands:
+      - command: wait-for-text
+        text: Stop Context Switching by Bringing Context Into Your Terminal
+  - prompt: Assert that introductory text is displayed.
+    commands:
+      - command: assert
+        expect: >-
+          Wave is an open-source terminal with superpowers, integrating file
+          previews, file editing, AI, web browsing, and workspace organization.
+  - prompt: Verify features such as "Manage Remote Machines" are listed.
+    commands:
+      - command: wait-for-text
+        text: Manage Remote Machines
+  - prompt: Assert there are no missing sections or content errors on the page.
+    commands:
+      - command: assert
+        expect: Manage Remote Machines
+      - command: assert
+        expect: Remote File Editing
+      - command: assert
+        expect: Screen Splitting and Layouts
+      - command: assert
+        expect: Work with Remote Files
+      - command: assert
+        expect: Inline Web Browser
