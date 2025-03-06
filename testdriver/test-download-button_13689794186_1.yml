@@ -1,0 +1,9 @@
+version: 4.2.12
+session: 67c909acf83fdb2e1aab65d0
+steps:
+  - prompt: Click on the "Download Beta" button.
+    commands:
+      - command: hover-text
+        text: Download Beta
+        description: download button for the beta version
+        action: click
